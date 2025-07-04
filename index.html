@@ -13,7 +13,7 @@
     }
 
     body {
-      font-family: 'Times New Roman', serif;
+      font-family: 'Poppins', sans-serif;
       background-color: #1c1c1e;
       color: #f0f0f0;
       line-height: 1.6;
@@ -24,7 +24,6 @@
       padding: 2rem 2rem 3rem;
       text-align: center;
       color: white;
-      position: relative;
     }
 
     header h1 {
@@ -43,10 +42,12 @@
     }
 
     .header-img {
-      max-width: 100%;
+      width: 100%;
+      max-height: 400px;
+      object-fit: cover;
       margin-top: 1rem;
       border-radius: 12px;
-      box-shadow: 0 0 20px #2b86c5;
+      box-shadow: 0 0 15px #2b86c5;
     }
 
     nav {
@@ -61,12 +62,26 @@
       border-radius: 30px;
       text-decoration: none;
       font-weight: bold;
-      transition: all 0.3s ease;
+      transition: background 0.3s ease, color 0.3s ease;
     }
 
     nav a:hover {
       background: #ff00d4;
       color: white;
+    }
+
+    .search-bar {
+      margin-top: 2rem;
+    }
+
+    .search-bar input {
+      padding: 0.6rem 1rem;
+      width: 80%;
+      max-width: 500px;
+      border-radius: 25px;
+      border: none;
+      outline: none;
+      font-size: 1rem;
     }
 
     main {
@@ -80,6 +95,22 @@
 
     .posts {
       flex: 2;
+      min-width: 0;
+    }
+
+    .tags {
+      margin: 1rem 0;
+    }
+
+    .tag {
+      display: inline-block;
+      background: #ff3cac;
+      color: white;
+      padding: 0.4rem 0.8rem;
+      margin: 0.3rem;
+      border-radius: 20px;
+      font-size: 0.9rem;
+      cursor: default;
     }
 
     article {
@@ -87,13 +118,13 @@
       padding: 1.5rem;
       margin-bottom: 2rem;
       border-radius: 10px;
-      box-shadow: 0 0 15px #ff3cac;
+      box-shadow: 0 0 10px #ff3cac66;
     }
 
     article h2 {
       color: #00f7ff;
       margin-bottom: 0.5rem;
-      font-size: 1.4rem;
+      font-size: 1.5rem;
     }
 
     article p {
@@ -110,13 +141,15 @@
       display: flex;
       align-items: center;
       gap: 1rem;
-      box-shadow: 0 0 15px #784ba0;
+      box-shadow: 0 0 10px #784ba066;
+      flex-wrap: wrap;
     }
 
     .athlete-card img {
       width: 120px;
       height: auto;
       border-radius: 10px;
+      flex-shrink: 0;
     }
 
     .athlete-card .info {
@@ -128,7 +161,8 @@
       background: #2b2b2d;
       padding: 1rem;
       border-radius: 10px;
-      box-shadow: 0 0 10px #00f7ff;
+      box-shadow: 0 0 10px #00f7ff66;
+      min-width: 250px;
     }
 
     aside h3 {
@@ -138,6 +172,7 @@
 
     aside ul {
       list-style: none;
+      padding-left: 0;
     }
 
     aside ul li {
@@ -150,82 +185,4 @@
       font-weight: bold;
     }
 
-    aside ul li a:hover {
-      color: #ff00d4;
-    }
-
-    footer {
-      text-align: center;
-      padding: 1rem;
-      background: #1c1c1e;
-      color: #999;
-      margin-top: 3rem;
-      font-size: 0.9rem;
-    }
-
-    @media (max-width: 768px) {
-      main {
-        flex-direction: column;
-      }
-    }
-  </style>
-</head>
-<body>
-
-  <header>
-    <h1>VitalFit Blog</h1>
-    <img src="https://i.pinimg.com/originals/62/54/5c/62545cb60d4d2e1e6e2789a3f09788e0.jpg" alt="Anime Fitness Header" class="header-img" />
-    <nav>
-      <a href="#">Inicio</a>
-      <a href="#">Sobre mí</a>
-      <a href="#">Contacto</a>
-    </nav>
-  </header>
-
-  <main>
-    <section class="posts">
-
-      <article>
-        <h2>5 apps que debes conocer en 2025</h2>
-        <p>Estas herramientas digitales están marcando tendencia en el entrenamiento físico digitalizado, generando impacto en rendimiento y consistencia diaria.</p>
-      </article>
-
-      <article>
-        <h2>Salud mental y redes: conexión responsable</h2>
-        <p>La gestión emocional en entornos digitales es clave. Aquí te explicamos cómo mejorar tu salud mental y mantener disciplina mientras consumes contenido fitness.</p>
-      </article>
-
-      <div class="athlete-card">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Usain_Bolt_Rio_100m_final_2016.jpg" alt="Usain Bolt" />
-        <div class="info">
-          <h3>Usain Bolt</h3>
-          <p>Última presentación técnica: 9.81s en los 100m de Río 2016. Aceleración perfecta en los primeros 30m, excelente control biomecánico y fase final sin pérdida de potencia.</p>
-        </div>
-      </div>
-
-      <div class="athlete-card">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/d/de/Simone_Biles_Rio2016.jpg" alt="Simone Biles" />
-        <div class="info">
-          <h3>Simone Biles</h3>
-          <p>Última actuación técnica: Mundial 2023. Ejecución impecable en doble mortal con giro, alto nivel de dificultad (G+), aterrizajes precisos y control mental sobresaliente.</p>
-        </div>
-      </div>
-
-    </section>
-
-    <aside>
-      <h3>Redes Sociales</h3>
-      <ul>
-        <li><a href="#">Instagram</a></li>
-        <li><a href="#">TikTok</a></li>
-        <li><a href="#">YouTube</a></li>
-      </ul>
-    </aside>
-  </main>
-
-  <footer>
-    &copy; 2025 VitalFit Blog | Inspiración y técnica para la nueva generación.
-  </footer>
-
-</body>
-</html>
+    asid
